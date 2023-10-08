@@ -12,7 +12,7 @@ declare -g ATF_TARGET_MAP="PLAT=$ATF_PLAT DEBUG=1 bl31;;build/$ATF_PLAT/debug/bl
 declare -g ATFBRANCH="tag:v2.9.0"
 declare -g BOOTDELAY=1
 declare -g BOOTPATCHDIR="${BOOTPATCHDIR:-"u-boot-sunxi"}"
-declare -g BOOTBRANCH="${BOOTBRANCH:-"tag:v2023.07.02"}"
+declare -g BOOTBRANCH="${BOOTBRANCH:-"tag:v2023.10"}"
 declare -g BOOTENV_FILE='sunxi.txt'
 UBOOT_TARGET_MAP="${UBOOT_TARGET_MAP:-BINMAN_ALLOW_MISSING=1;;u-boot-sunxi-with-spl.bin}"
 declare -g BOOTSCRIPT='boot-sun50i-next.cmd:boot.cmd'
@@ -24,17 +24,17 @@ case $BRANCH in
 
 	legacy)
 		declare -g KERNEL_MAJOR_MINOR="5.15" # Major and minor versions of this kernel.
-		declare -g KERNELBRANCH="tag:v5.15.130"
+		declare -g KERNELBRANCH="tag:v5.15.134"
 		;;
 
 	current)
 		declare -g KERNEL_MAJOR_MINOR="6.1" # Major and minor versions of this kernel.
-		declare -g KERNELBRANCH="tag:v6.1.51"
+		declare -g KERNELBRANCH="tag:v6.1.56"
 		;;
 
 	edge)
 		declare -g KERNEL_MAJOR_MINOR="6.5" # Major and minor versions of this kernel.
-		declare -g KERNELBRANCH="tag:v6.5.1"
+		declare -g KERNELBRANCH="tag:v6.5.6"
 		;;
 esac
 
